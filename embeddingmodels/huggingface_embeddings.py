@@ -7,7 +7,6 @@ embedding =HuggingFaceEmbeddings(
 texts = [
     "Hello this is Harshika Malhotra",
     "Hello your name is Youtube",
-    "And you all are very beautiful"
 ]
 
 vector = embedding.embed_documents(texts)
