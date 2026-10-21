@@ -7,7 +7,6 @@ from langchain_core.messages import AIMessage, SystemMessage, HumanMessage
 
 model = ChatGroq(model="openai/gpt-oss-20b") 
 
-# short term memory
 messages = [
     SystemMessage(content="you are a funny Ai agent")
 ]
@@ -18,7 +17,7 @@ while True:
     messages.append(HumanMessage(content=prompt))
     if prompt == "0":
         break
-    response = model.invoke(messages) # it can hit token limit, slower response
+    response = model.invoke(messages)
     messages.append(AIMessage(content=response.content))
     print("Bot : ", response.content)
 
