@@ -8,7 +8,6 @@ from langchain_groq import ChatGroq
 model = ChatGroq(model="openai/gpt-oss-20b")
 
 prompt = PromptTemplate.from_template("")
-
 response = model.invoke("")
 
 print(response.content)
